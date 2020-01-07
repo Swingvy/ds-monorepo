@@ -5,7 +5,7 @@
     "module": "src/index.js",
     "scripts": {
         "test": "echo testing button with version: $npm_package_version",
-        "new-version": "lerna version --conventional-commits --yes",
+        "new-version": "lerna version --conventional-commits --yes"
     },
     "dependencies": {
         "react": "16.10.1",
