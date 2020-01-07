@@ -6,7 +6,7 @@
     ],
     "scripts": {
         "bootstrap": "lerna bootstrap --use-workspaces",
-        "build": "lerna exec --parallel --babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+        "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
         "dev": "start-storybook -p 5555",
         "coverage": "jest --coverage",
         "unit": "jest",
@@ -14,7 +14,14 @@
         
         "test": "lerna run test",
         "new-version": "lerna version --conventional-commits --yes",
-        "diff": "lerna diff"
+        "diff": "lerna diff",
+
+
+        "lint": "eslint /packages/*/src",
+        "build:babel": "lerna exec --parallel -- babel src -d lib",
+        "build:webpack": "lerna run build:webpack",
+        "build2": "yarn build:babel && yarn build:webpack",
+        "release": "yarn lint && yarn build && lerna publish"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
