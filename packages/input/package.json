@@ -3,6 +3,9 @@
     "version": "1.0.1",
     "main": "lib/index.js",
     "module": "src/index.js",
+    "scripts": {
+        "test": "echo testing input with version: $npm_package_version"
+    },
     "dependencies": {
         "react": "16.10.1",
         "react-dom": "16.10.1",
