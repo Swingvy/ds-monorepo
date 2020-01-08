@@ -1,5 +1,5 @@
 {
-    "name": "button",
+    "name": "@sds/button",
     "version": "2.1.1",
     "main": "lib/index.js",
     "module": "src/index.js",
