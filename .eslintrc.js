@@ -5,7 +5,13 @@ module.exports = {
         node: true,
         jest: true,
     },
-    extends: ['airbnb-base', 'prettier', 'plugin:@typescript-eslint/eslint-recommended'],
+    extends: [
+        'eslint:recommended',
+        'plugin:react/recommended',
+		'airbnb-base',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:prettier/recommended'
+	],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
@@ -19,5 +25,7 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react', '@typescript-eslint'],
-    rules: {},
+    rules: {
+        "import/no-extraneous-dependencies": ["error", {"packageDir": "./"}]
+    },
 };
