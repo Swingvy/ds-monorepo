@@ -13,12 +13,12 @@
         "test": "lerna run test",
         "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff",
-        "lint": "eslint /packages/*/src",
         "build:babel": "lerna exec --parallel -- babel src -d lib",
         "build:webpack": "lerna run build:webpack",
         "build2": "yarn build:babel && yarn build:webpack",
         "release": "yarn lint && yarn build && lerna publish",
-        "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\""
+        "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
+        "lint": "eslint ."
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
@@ -32,7 +32,10 @@
         "babel-loader": "^8.0.6",
         "babel-plugin-styled-components": "^1.10.6",
         "eslint": "^6.8.0",
-        "eslint-plugin-react": "^7.17.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-import": "^2.19.1",
+        "eslint-plugin-prettier": "^3.1.2",
         "husky": "^4.0.1",
         "jest": "^24.9.0",
         "jest-haste-map": "^24.9.0",
