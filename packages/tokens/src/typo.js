@@ -1,4 +1,4 @@
-const baseTypo = { fontFamily: 'Radikal' }
+const baseTypo = { fontFamily: 'Radikal' };
 
 export default {
     h: {
@@ -51,7 +51,6 @@ export default {
             lineHeight: '26px',
             letterSpacing: 0,
         },
-
     },
     heading: {
         ...baseTypo,
@@ -132,5 +131,5 @@ export default {
             lineHeight: '16px',
             letterSpacing: 0,
         },
-    }
-}
+    },
+};

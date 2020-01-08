@@ -18,7 +18,6 @@
         "build:webpack": "lerna run build:webpack",
         "build2": "yarn build:babel && yarn build:webpack",
         "release": "yarn lint && yarn build && lerna publish",
-
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\""
     },
     "devDependencies": {
