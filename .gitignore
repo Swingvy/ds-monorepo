@@ -2,6 +2,6 @@
 .DS_Store
 .jest-*
 lib
-node_modules
+node_modules/
 .idea/
 *.log
