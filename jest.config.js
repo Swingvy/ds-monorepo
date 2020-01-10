@@ -1,4 +1,9 @@
 module.exports = {
+    roots: ['<rootDir>/packages'],
+    testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
+    transform: {
+        '^.+\\.(ts|tsx)$': 'ts-jest',
+    },
     cacheDirectory: '.jest-cache',
     coverageDirectory: '.jest-coverage',
     coveragePathIgnorePatterns: ['<rootDir>/packages/(?:.+?)/lib/'],

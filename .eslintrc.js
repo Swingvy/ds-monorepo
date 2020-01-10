@@ -1,10 +1,4 @@
 const path = require('path');
-const glob = require('glob');
-
-const rootAbsPath = path.resolve(__dirname);
-//const packageAbsPaths = [rootAbsPath].concat(glob.sync(rootAbsPath+"/packages/*"));
-const packageAbsPaths = glob.sync(rootAbsPath + '/packages/*');
-console.log('packageAbsPaths', packageAbsPaths);
 
 module.exports = {
     env: {
@@ -13,16 +7,12 @@ module.exports = {
         node: true,
         jest: true,
     },
-    extends: [
-        'airbnb-base',
-        'plugin:prettier/recommended',
-        'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended',
-    ],
     globals: {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
     },
+    extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/@typescript-eslint', 'prettier/react'],
+    plugins: ['react', '@typescript-eslint'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaFeatures: {
@@ -31,9 +21,25 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
-    rules: {},
+    rules: {
+        'react/jsx-filename-extension': ['error', { extensions: ['.tsx', '.jsx'] }],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': 'error',
+        'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'error',
+        'react/prop-types': 'off',
+        'default-case': 'off',
+        'import/prefer-default-export': 'off',
+        'import/no-extraneous-dependencies': [
+            'error',
+            { devDependencies: ['**/*.story.(js|jsx|ts|tsx)', '**/*.spec.*'] },
+        ],
+    },
     settings: {
+        'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+        'import/parsers': {
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
         'import/resolver': {
             'eslint-import-resolver-lerna': {
                 packages: path.resolve(__dirname, 'packages'),
