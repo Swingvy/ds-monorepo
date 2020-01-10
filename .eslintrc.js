@@ -1,3 +1,11 @@
+const path = require('path');
+const glob = require('glob');
+
+const rootAbsPath = path.resolve(__dirname);
+//const packageAbsPaths = [rootAbsPath].concat(glob.sync(rootAbsPath+"/packages/*"));
+const packageAbsPaths = glob.sync(rootAbsPath + '/packages/*');
+console.log('packageAbsPaths', packageAbsPaths);
+
 module.exports = {
     env: {
         browser: true,
@@ -6,11 +14,10 @@ module.exports = {
         jest: true,
     },
     extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
         'airbnb-base',
-        'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
     ],
     globals: {
         Atomics: 'readonly',
@@ -25,7 +32,15 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['react', '@typescript-eslint'],
-    rules: {
-        'import/no-extraneous-dependencies': ['error', { packageDir: './' }],
+    rules: {},
+    settings: {
+        'import/resolver': {
+            'eslint-import-resolver-lerna': {
+                packages: path.resolve(__dirname, 'packages'),
+            },
+        },
+        react: {
+            version: '16.12.0',
+        },
     },
 };

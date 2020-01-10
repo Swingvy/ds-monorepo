@@ -1,7 +1,8 @@
+import { color } from '@sds/tokens';
 import styled from 'styled-components';
 
 const Button = styled.button`
-    background: red;
+    background: ${props => (props.color ? 'red' : color.red[500])};
     color: #fff;
     border-radius: 3px;
     cursor: pointer;

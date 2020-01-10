@@ -9,7 +9,9 @@
     ],
     "scripts": {
         "bootstrap": "lerna bootstrap --use-workspaces",
-        "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+        "type-check": "tsc --noEmit",
+        "type-check:watch": "npm run type-check -- --watch",
+        "build": "lerna exec --parallel -- babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js --extensions \".ts,.tsx\"",
         "dev": "start-storybook -p 5555",
         "coverage": "jest --coverage",
         "unit": "jest",
@@ -28,7 +30,9 @@
         "@babel/core": "^7.7.7",
         "@babel/preset-env": "^7.7.7",
         "@babel/preset-react": "^7.7.4",
+        "@babel/preset-typescript": "^7.7.7",
         "@storybook/react": "^5.2.8",
+        "@types/styled-components": "^4.4.2",
         "@typescript-eslint/eslint-plugin": "^2.15.0",
         "@typescript-eslint/parser": "^2.15.0",
         "babel-jest": "^24.9.0",
@@ -37,9 +41,11 @@
         "eslint": "^6.8.0",
         "eslint-config-airbnb-base": "^14.0.0",
         "eslint-config-prettier": "^6.9.0",
+        "eslint-import-resolver-lerna": "^1.1.0",
         "eslint-plugin-import": "^2.19.1",
         "eslint-plugin-prettier": "^3.1.2",
         "eslint-plugin-react": "^7.17.0",
+        "glob": "^7.1.6",
         "husky": "^4.0.1",
         "jest": "^24.9.0",
         "jest-haste-map": "^24.9.0",
@@ -57,17 +63,19 @@
         "yarn": "^1.21.1"
     },
     "dependencies": {
+        "@babel/polyfill": "^7.7.0",
+        "core-js": "3.6.2",
         "typescript": "^3.7.4"
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": ""
         }
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css,less}": [
             "npm run format",
-            "eslint --fix",
+            "eslint . --fix",
             "git add"
         ]
     }
