@@ -59,6 +59,9 @@ module.exports = {
             '@typescript-eslint/parser': ['.ts', '.tsx'],
         },
         'import/resolver': {
+            node: {
+                extensions: ['.js', '.jsx', '.ts', '.tsx'],
+            },
             'eslint-import-resolver-lerna': {
                 packages: path.resolve(__dirname, 'packages'),
             },
