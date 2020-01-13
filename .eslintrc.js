@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    root: true,
     env: {
         browser: true,
         es6: true,
@@ -11,7 +12,13 @@ module.exports = {
         Atomics: 'readonly',
         SharedArrayBuffer: 'readonly',
     },
-    extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/@typescript-eslint', 'prettier/react'],
+    extends: [
+        'airbnb',
+        'prettier',
+        'prettier/react',
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+    ],
     plugins: ['react', '@typescript-eslint'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -33,6 +40,17 @@ module.exports = {
         'import/no-extraneous-dependencies': [
             'error',
             { devDependencies: ['**/*.story.(js|jsx|ts|tsx)', '**/*.spec.*'] },
+        ],
+        'import/extensions': [
+            //https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
+            'error',
+            'ignorePackages',
+            {
+                js: 'never',
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never',
+            },
         ],
     },
     settings: {
