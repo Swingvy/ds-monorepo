@@ -14,7 +14,6 @@
         "coverage": "jest --coverage",
         "unit": "jest",
         "test": "lerna run test",
-        "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff",
         "release": "yarn lint && yarn build && lerna publish",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
@@ -22,7 +21,8 @@
         "clear": "lerna exec --parallel -- yarn clear",
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
         "compile:js": "lerna exec --parallel -- yarn compile:js",
-        "compile": "yarn clear && yarn compile:js && yarn compile:ts"
+        "compile": "yarn clear && yarn compile:js && yarn compile:ts",
+        "new-version": "lerna version --conventional-commits --yes"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
@@ -75,7 +75,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "post-commit": "echo '\n\n[🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺 ]\n\n' && lerna changed -l"
+            "post-commit": "echo '\n\n🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺\n\n' && lerna changed -l"
         }
     },
     "lint-staged": {
