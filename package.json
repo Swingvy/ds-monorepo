@@ -10,6 +10,7 @@
     "test": "jest",
     "scripts": {
         "bootstrap": "lerna bootstrap --use-workspaces",
+        "init": "lerna clean && yarn install && yarn bootstrap && lerna link convert",
         "dev": "start-storybook -p 5555",
         "coverage": "jest --coverage",
         "unit": "jest",
@@ -30,8 +31,9 @@
         "@babel/preset-env": "^7.7.7",
         "@babel/preset-react": "^7.7.4",
         "@babel/preset-typescript": "^7.7.7",
+        "@commitlint/cli": "^8.3.4",
+        "@commitlint/config-conventional": "^8.3.4",
         "@storybook/core": "^5.3.1",
-        "@storybook/react": "^5.2.8",
         "@types/jest": "^24.0.25",
         "@types/react-test-renderer": "^16.9.1",
         "@types/styled-components": "^4.4.2",
@@ -64,7 +66,6 @@
         "react-dom": "^16.12.0",
         "react-test-renderer": "^16.12.0",
         "ts-jest": "^24.3.0",
-        "webpack": "^4.41.5",
         "yarn": "^1.21.1"
     },
     "dependencies": {
