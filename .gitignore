@@ -4,6 +4,6 @@
 lib
 node_modules/
 .idea/
-*.log
+**/*.log
 **/*.tsbuildinfo
 package-lock.json
