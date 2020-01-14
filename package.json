@@ -26,11 +26,14 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
-        "@babel/core": "^7.7.7",
+        "@babel/core": "^7.8.0",
         "@babel/preset-env": "^7.7.7",
         "@babel/preset-react": "^7.7.4",
         "@babel/preset-typescript": "^7.7.7",
+        "@storybook/core": "^5.3.1",
+        "@storybook/react": "^5.2.8",
         "@types/jest": "^24.0.25",
+        "@types/react-test-renderer": "^16.9.1",
         "@types/styled-components": "^4.4.2",
         "@typescript-eslint/eslint-plugin": "^2.15.0",
         "@typescript-eslint/parser": "^2.15.0",
@@ -57,16 +60,17 @@
         "prettier": "^1.19.1",
         "pretty-quick": "^2.0.1",
         "react": "^16.12.0",
+        "react-docgen": "^5.1.0",
         "react-dom": "^16.12.0",
         "react-test-renderer": "^16.12.0",
+        "ts-jest": "^24.3.0",
         "webpack": "^4.41.5",
         "yarn": "^1.21.1"
     },
     "dependencies": {
-        "@babel/polyfill": "^7.7.0",
-        "@storybook/react": "^5.3.1",
-        "core-js": "3.6.2",
-        "typescript": "^3.7.4"
+        "@sds/button": "file:packages/button",
+        "@sds/input": "file:packages/input",
+        "@sds/theme": "file:packages/theme"
     },
     "husky": {
         "hooks": {
@@ -75,8 +79,8 @@
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css,less}": [
-            "npm run format",
-            "eslint . --fix",
+            "yarn format",
+            "yarn lint",
             "git add"
         ]
     }

@@ -1,6 +1,3 @@
-// TODO tsconfig
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import * as React from 'react';
 import { colors } from '@sds/theme';
 import styled from 'styled-components';
 
