@@ -22,7 +22,7 @@
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
         "compile:js": "lerna exec --parallel -- yarn compile:js",
         "compile": "yarn clean:output && yarn compile:js && yarn compile:ts",
-        "new-version": "lerna version --conventional-commits --yes"
+        "new-version": "lerna version --conventional-commits"
     },
     "devDependencies": {
         "@babel/cli": "^7.7.7",
