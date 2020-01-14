@@ -6,7 +6,7 @@
     "command": {
         "version": {
             "conventionalCommits": true,
-            "message": "chore(release): publish %s [skip ci]"
+            "message": "chore: update version %s [skip ci]"
         }
     }
 }
