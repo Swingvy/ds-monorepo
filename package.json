@@ -75,7 +75,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "post-commit": "echo '[🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺 ]' && lerna changed -l"
+            "post-commit": "echo '\n\n[🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺 ]\n\n' && lerna changed -l"
         }
     },
     "lint-staged": {
