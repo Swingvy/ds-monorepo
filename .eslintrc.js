@@ -37,10 +37,7 @@ module.exports = {
         'react/prop-types': 'off',
         'default-case': 'off',
         'import/prefer-default-export': 'off',
-        'import/no-extraneous-dependencies': [
-            'error',
-            { devDependencies: ['**/*.story.(js|jsx|ts|tsx)', '**/*.spec.*'] },
-        ],
+        'import/no-extraneous-dependencies': 'off',
         'import/extensions': [
             //https://stackoverflow.com/questions/59265981/typescript-eslint-missing-file-extension-ts-import-extensions
             'error',

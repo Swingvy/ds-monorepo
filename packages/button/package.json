@@ -3,9 +3,13 @@
     "version": "2.1.1",
     "main": "lib/index.js",
     "module": "src/index.js",
+    "types": "lib/index",
     "scripts": {
         "test": "echo testing button with version: $npm_package_version",
-        "new-version": "lerna version --conventional-commits --yes"
+        "new-version": "lerna version --conventional-commits --yes",
+        "clear": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
+        "compile:ts": "tsc -b -w tsconfig.json",
+        "compile:js": "babel --root-mode upward src -d lib --ignore '**/*.spec.tsx','**/*.story.tsx' --extensions \".ts,.tsx\""
     },
     "dependencies": {
         "@storybook/react": "^5.3.1",
