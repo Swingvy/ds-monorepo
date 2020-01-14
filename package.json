@@ -10,8 +10,6 @@
     "test": "jest",
     "scripts": {
         "bootstrap": "lerna bootstrap --use-workspaces",
-        "type-check": "tsc --noEmit",
-        "type-check:watch": "npm run type-check -- --watch",
         "dev": "start-storybook -p 5555",
         "coverage": "jest --coverage",
         "unit": "jest",
@@ -72,7 +70,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": ""
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
