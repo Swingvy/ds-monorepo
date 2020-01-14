@@ -2230,6 +2230,30 @@
   dependencies:
     any-observable "^0.3.0"
 
+"@sds/button@file:packages/button":
+  version "2.1.1"
+  dependencies:
+    "@storybook/react" "^5.3.1"
+    react "^16.12.0"
+    styled-components "^4.4.1"
+    typescript "^3.7.4"
+
+"@sds/input@file:packages/input":
+  version "3.0.0"
+  dependencies:
+    "@storybook/react" "^5.3.1"
+    react "^16.12.0"
+    styled-components "^4.4.1"
+    typescript "^3.7.4"
+
+"@sds/theme@file:packages/theme":
+  version "1.1.0"
+  dependencies:
+    "@storybook/react" "^5.3.1"
+    react "^16.12.0"
+    styled-components "^4.4.1"
+    typescript "^3.7.4"
+
 "@storybook/addons@5.3.1":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.3.1.tgz#617a4c489b936fe9bb4fb04dc06d20f92a9eb065"

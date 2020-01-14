@@ -6,7 +6,7 @@
     "types": "lib/index.d.ts",
     "scripts": {
         "test": "echo testing input with version: $npm_package_version",
-        "clear": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
+        "clean:output": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
         "compile:ts": "tsc -b -w tsconfig.json",
         "compile:js": "babel --root-mode upward src -d lib --ignore '**/*.spec.tsx','**/*.story.tsx' --extensions \".ts,.tsx\""
     },

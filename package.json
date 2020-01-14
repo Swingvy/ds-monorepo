@@ -9,8 +9,6 @@
     ],
     "test": "jest",
     "scripts": {
-        "bootstrap": "lerna bootstrap --use-workspaces",
-        "init": "lerna clean && yarn install && yarn bootstrap && lerna link convert",
         "dev": "start-storybook -p 5555",
         "coverage": "jest --coverage",
         "unit": "jest",
@@ -19,10 +17,11 @@
         "release": "yarn lint && yarn build && lerna publish",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
         "lint": "eslint .",
-        "clear": "lerna exec --parallel -- yarn clear",
+        "initialize": "lerna clean && yarn install && lerna bootstrap --use-workspaces && lerna link convert",
+        "clean:output": "lerna exec --parallel -- yarn clean:output",
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
         "compile:js": "lerna exec --parallel -- yarn compile:js",
-        "compile": "yarn clear && yarn compile:js && yarn compile:ts",
+        "compile": "yarn clean:output && yarn compile:js && yarn compile:ts",
         "new-version": "lerna version --conventional-commits --yes"
     },
     "devDependencies": {
