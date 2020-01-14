@@ -6,7 +6,7 @@
     "command": {
         "version": {
             "conventionalCommits": true,
-            "message": "chore: update version %s [skip ci]"
+            "message": "chore: update package(s) version"
         }
     }
 }
