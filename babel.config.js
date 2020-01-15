@@ -6,6 +6,7 @@ module.exports = {
             '@babel/preset-env',
             {
                 useBuiltIns: 'usage',
+                corejs: { version: '3.6', proposals: true },
             },
         ],
         '@babel/preset-react',
