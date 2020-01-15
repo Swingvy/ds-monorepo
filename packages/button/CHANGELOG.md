@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/Swingvy/ds-monorepo/compare/@sds/button@2.1.6...@sds/button@2.1.7) (2020-01-15)
+
+**Note:** Version bump only for package @sds/button
+
+
+
+
+
 ## [2.1.6](https://github.com/Swingvy/ds-monorepo/compare/@sds/button@3.0.0...@sds/button@2.1.6) (2020-01-14)
 
 **Note:** Version bump only for package @sds/button
