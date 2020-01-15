@@ -77,7 +77,7 @@
         "hooks": {
             "pre-commit": "lint-staged",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-            "post-commit": "echo '\n\n🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺\n\n' && lerna changed -l"
+            "post-commit": "echo '\n\n🍺 🍺 🍺 🍺 🍺  !!commit success!! 🍺 🍺 🍺 🍺 🍺\n\n'"
         }
     },
     "lint-staged": {
