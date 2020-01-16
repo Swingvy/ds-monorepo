@@ -11,4 +11,15 @@ module.exports = {
         ],
         '@babel/preset-react',
     ],
+    ignore: [
+        '**/*.story.js',
+        '**/*.story.ts',
+        '**/*.story.tsx',
+        '**/*.test.js',
+        '**/*.test.ts',
+        '**/*.test.tsx',
+        '**/*.spec.js',
+        '**/*.spec.ts',
+        '**/*.spec.tsx',
+    ],
 };

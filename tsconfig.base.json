@@ -16,11 +16,8 @@
         "strict": true,
         "emitDeclarationOnly": true,
         "typeRoots": ["node_modules/@types/react", "node_modules/@types/jest"],
-        "baseUrl": ".",
         "paths": {
-            "@sds/*": ["packages/*/src"]
+            "@sds/*": ["@sds/*/src"]
         }
-    },
-    "include": ["packages/*/src"],
-    "exclude": ["node_modules", "lib"]
+    }
 }

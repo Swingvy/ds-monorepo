@@ -6,6 +6,6 @@
         "baseUrl": "src"
     },
     "references": [{ "path": "../theme" }],
-    "include": ["src"],
+    "include": ["src/index.tsx"],
     "exclude": ["node_modules", "lib"]
 }

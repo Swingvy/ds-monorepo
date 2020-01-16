@@ -1,15 +1,14 @@
 {
     "name": "@sds/theme",
     "version": "1.1.5",
-    "main": "lib/index.js",
     "module": "src/index.js",
-    "types": "lib/index.d.ts",
+    "main": "lib/index.js",
+    "types": "lib/index.ts",
     "scripts": {
         "test": "echo testing tokens with version: $npm_package_version",
         "clean:output": "rm -rf ./lib && rm -rf tsconfig.tsbuildinfo",
-        "check:types": "tsc --project tsconfig.json",
-        "compile:ts": "tsc --build --watch --project tsconfig.json",
-        "compile:js": "babel --root-mode upward src -d lib --ignore '**/*.spec.tsx','**/*.story.tsx' --extensions \".ts,.tsx\""
+        "compile:ts": "tsc --build",
+        "compile:js": "babel --root-mode upward src/index.ts -d lib --extensions \".ts,.tsx\""
     },
     "dependencies": {
         "@storybook/react": "^5.3.1",
