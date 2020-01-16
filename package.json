@@ -16,7 +16,7 @@
         "diff": "lerna diff",
         "release": "yarn lint && yarn build && lerna publish",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
-        "lint": "eslint .",
+        "lint": "eslint . --fix",
         "initialize": "lerna clean && yarn install && lerna bootstrap --use-workspaces && lerna link convert",
         "clean:output": "lerna exec --parallel -- yarn clean:output",
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
