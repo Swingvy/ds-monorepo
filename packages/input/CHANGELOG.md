@@ -7,17 +7,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sds/input
 
-
-
-
-
 ## [3.0.4](https://github.com/Swingvy/ds-monorepo/compare/@sds/input@3.0.0...@sds/input@3.0.4) (2020-01-14)
 
 **Note:** Version bump only for package @sds/input
-
-
-
-
 
 # 3.0.0 (2020-01-14)
 

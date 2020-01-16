@@ -7,25 +7,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sds/button
 
-
-
-
-
 ## [2.1.6](https://github.com/Swingvy/ds-monorepo/compare/@sds/button@3.0.0...@sds/button@2.1.6) (2020-01-14)
 
 **Note:** Version bump only for package @sds/button
 
-
-
-
-
 ## [2.1.5](https://github.com/Swingvy/ds-monorepo/compare/@sds/button@3.0.0...@sds/button@2.1.5) (2020-01-14)
 
 **Note:** Version bump only for package @sds/button
-
-
-
-
 
 # 3.0.0 (2020-01-14)
 
