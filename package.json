@@ -15,9 +15,10 @@
         "test": "lerna run test",
         "diff": "lerna diff",
         "release": "yarn lint && yarn build && lerna publish",
+        "initialize": "lerna clean && yarn install && lerna bootstrap --use-workspaces && lerna link convert",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
         "lint": "eslint . --fix",
-        "initialize": "lerna clean && yarn install && lerna bootstrap --use-workspaces && lerna link convert",
+        "check:types": "lerna exec -- yarn check:types",
         "clean:output": "lerna exec --parallel -- yarn clean:output",
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
         "compile:js": "lerna exec --parallel -- yarn compile:js",
@@ -82,9 +83,11 @@
     },
     "lint-staged": {
         "**/*.{js,jsx,ts,tsx,css,less}": [
+            "yarn check:types",
             "yarn format",
             "yarn lint",
             "git add"
         ]
-    }
+    },
+    "license": "ISC"
 }
