@@ -1,4 +1,4 @@
-export declare const white = '#ffffff';
+export declare const white = "#ffffff";
 export declare const indigo: {
     100: string;
     200: string;
