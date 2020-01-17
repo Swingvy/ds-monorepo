@@ -17,7 +17,7 @@
         "release": "yarn lint && yarn build && lerna publish",
         "initialize": "lerna clean && yarn install && lerna bootstrap --use-workspaces && lerna link convert",
         "format": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|css|less|md)\"",
-        "lint": "eslint . --fix",
+        "lint": "eslint --ext .js,.jsx,.ts,.tsx --fix .",
         "clean:output": "lerna exec --parallel -- yarn clean:output",
         "compile:ts": "lerna exec --parallel -- yarn compile:ts",
         "compile:js": "lerna exec --parallel -- yarn compile:js",
@@ -37,8 +37,8 @@
         "@types/jest": "^24.0.25",
         "@types/react-test-renderer": "^16.9.1",
         "@types/styled-components": "^4.4.2",
-        "@typescript-eslint/eslint-plugin": "^2.15.0",
-        "@typescript-eslint/parser": "^2.15.0",
+        "@typescript-eslint/eslint-plugin": "^2.16.0",
+        "@typescript-eslint/parser": "^2.16.0",
         "babel-jest": "^24.9.0",
         "babel-loader": "^8.0.6",
         "babel-plugin-styled-components": "^1.10.6",
@@ -81,7 +81,7 @@
         }
     },
     "lint-staged": {
-        "**/*.{js,jsx,ts,tsx,css,less}": [
+        "**/*.+(js|jsx|ts|tsx|css|less)": [
             "yarn format",
             "yarn lint",
             "git add"
