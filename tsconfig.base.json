@@ -15,9 +15,6 @@
         "esModuleInterop": true,
         "strict": true,
         "emitDeclarationOnly": true,
-        "typeRoots": ["node_modules/@types/react", "node_modules/@types/jest"],
-        "paths": {
-            "@sds/*": ["@sds/*/src"]
-        }
+        "typeRoots": ["node_modules/@types/react", "node_modules/@types/jest"]
     }
 }

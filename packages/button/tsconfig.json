@@ -5,7 +5,6 @@
         "rootDir": "src",
         "baseUrl": "src"
     },
-    "references": [{ "path": "../theme" }],
     "include": ["src/index.tsx"],
     "exclude": ["node_modules", "lib"]
 }
