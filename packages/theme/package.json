@@ -1,8 +1,8 @@
 {
     "name": "@sds/theme",
     "version": "1.1.5",
-    "module": "src/index",
-    "main": "lib/index",
+    "module": "src",
+    "main": "lib",
     "types": "lib",
     "scripts": {
         "test": "echo testing tokens with version: $npm_package_version",
